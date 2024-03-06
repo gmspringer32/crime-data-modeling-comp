@@ -100,7 +100,7 @@ These or other data you find could be used to answer the questions.
 specifically on violent crimes. This dataset is quite large, with half a million records.
 It can be found at `https://richardson.byu.edu/data contest/2024/Crimes.csv`.
 
-2. Weather.csv: Daily weather data since 2010, capturing temperature, precipitation, wind speed, and other meteorological variables. This dataset can be found at
+2. Weather.csv: Daily weather data since 2010, capturing temperature, precipitation, wind speed, and other meteorological variables. This dataset can be found at
 `https://richardson.byu.edu/data contest/2024/weather.csv`.
 
 3. Holidays.csv: A dataset listing major public holidays since 2010. This dataset can
