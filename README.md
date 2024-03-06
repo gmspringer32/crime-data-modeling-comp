@@ -98,16 +98,16 @@ These or other data you find could be used to answer the questions.
 1. Crimes.csv: This dataset is a detailed record of every crime reported in District
 11 in Chicago since 2001, including date, type, location, and outcome. We’ll focus
 specifically on violent crimes. This dataset is quite large, with half a million records.
-It can be found at https://richardson.byu.edu/data contest/2024/Crimes.csv.
+It can be found at `https://richardson.byu.edu/data contest/2024/Crimes.csv`.
 
 2. Weather.csv: Daily weather data since 2010, capturing temperature, precipitation, wind speed, and other meteorological variables. This dataset can be found at
-https://richardson.byu.edu/data contest/2024/weather.csv.
+`https://richardson.byu.edu/data contest/2024/weather.csv`.
 
 3. Holidays.csv: A dataset listing major public holidays since 2010. This dataset can
-be found at https://richardson.byu.edu/data contest/2024/holidays.csv.
+be found at `https://richardson.byu.edu/data contest/2024/holidays.csv`.
 
 4. Full moon.csv: Contains the dates of all full moons since 2005. This dataset can
-be found at https://richardson.byu.edu/data contest/2024/full moon.csv.
+be found at `https://richardson.byu.edu/data contest/2024/full moon.csv`.
 
 You are not limited to these datasets or even these factors. Feel free to use only what
 is given here or to go find additional features of your own. You will reconvene with
