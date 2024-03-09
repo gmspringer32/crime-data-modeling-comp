@@ -1,0 +1,26 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Jupyter Notebook temporary files
+.ipynb_checkpoints
+
+# Jupyter Notebook autosave files
+*.ipynb*
+
+# Jupyter Notebook kernel connection file
+*.json
+
+# Jupyter Notebook HTML export files
+*.html
+
+# Jupyter Notebook log files
+*.log
+
+# Jupyter Notebook configuration files
+*.ipynb_config.py
+
+# Jupyter Notebook widgets state files
+*.widgets
+
+# Jupyter Notebook session files
+*.session
