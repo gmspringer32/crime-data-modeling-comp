@@ -4,8 +4,6 @@
 # Jupyter Notebook temporary files
 .ipynb_checkpoints
 
-# Jupyter Notebook autosave files
-*.ipynb*
 
 # Jupyter Notebook kernel connection file
 *.json
