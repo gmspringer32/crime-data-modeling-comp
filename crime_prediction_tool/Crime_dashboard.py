@@ -122,7 +122,7 @@ input_df = pd.DataFrame({temp_max: [today_max_temp, tomorrow_max_temp, day_3_max
                             yesterday_total: [yesterday_total]})
 
 
-total_pred = y_train.tail(1)["Total"].values[0]
+total_pred = input_df["yesterday_total"][0]
 preds = []
 ensemble_model = EnsembleModel(linear_regression_model, model)
 for i in range(len(input_df)):
