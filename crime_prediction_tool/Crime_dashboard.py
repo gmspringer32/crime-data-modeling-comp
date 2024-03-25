@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import plotly.express as px
 import seaborn as sns
+import jsonpickle
 
 st.title('Chicago District 11 Crime Prediction Tool')
 
@@ -19,9 +20,9 @@ from xgboost import XGBRegressor
 from sklearn.linear_model import LinearRegression
 
 xgb_model = XGBRegressor()
-xgb_model.load_model("xgb_model.model")
+xgb_model.load_model("crime_prediction_tool/xgb_model.model")
 
-with open("linear_regression_model.json", "r") as f:
+with open("crime_prediction_tool/linear_regression_model.json", "r") as f:
     serialized_linear_model = f.read()
     linear_model = jsonpickle.decode(serialized_linear_model)
     
@@ -34,6 +35,7 @@ class EnsembleModel:
         return (self.linear_model.predict(X) + self.xgb_model.predict(X))[0]
 # Get input from user about todays date
 today_date = st.date_input('Enter the date', pd.to_datetime('2024-02-17'))
+today_date = pd.to_datetime(today_date)
 # calculate the day of the week
 today_day_of_week = today_date.dayofweek
 # Get input from user about yesters total crimes
