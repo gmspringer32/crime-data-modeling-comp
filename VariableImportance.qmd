@@ -1,0 +1,46 @@
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(vroom)
+library(MASS)
+library(nlme)
+library(car)
+library(multcomp)
+library(forecast)
+
+crime <- vroom("crime_prediction_tool/final_data.csv")
+```
+```{r}
+# Get the columns from crime
+colnames(crime)
+# Only keep 'Date', 'Total'
+crime <- crime %>% dplyr::select(1,41)
+# Convert Date to a date
+crime$Date <- as.Date(crime$Date)
+# Create a time series object
+my.ts <- ts(crime$Total, frequency=7)
+auto.arima(my.ts, max.p=2, max.q=2, max.P=1, max.Q=1, max.d=1, max.D=1, ic="aic", stepwise=FALSE)
+```
+```{r}
+my.sarima.model <- Arima(my.ts, order=c(1,1,1), seasonal=c(1,0,0))
+
+# Independence - ACF of decorrelated residuals
+ggAcf(resid(my.sarima.model), lag.max=24)
+
+# Normality - Histogram of decorrelated residuals
+ggplot()+ 
+  geom_density(mapping=aes(x=resid(my.sarima.model)))
+```
+```{r}
+# Reload the data
+crime <- vroom("crime_prediction_tool/final_data.csv")
+# Fit a linear model to the data
+lm_model <- lm(Total ~ ., data=crime)
+# Check variable importance
+summary(lm_model)
+```
+```{r}
+```
+
